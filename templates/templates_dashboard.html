@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block page_style %}
+    <!-- Add styles here -->
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/templates.css') }}">
+    <!-- Bootstrap is included in the base.html which is extended above -->
+{% endblock %}
+
+{% block page_content %}
+    <!-- Add your html here. If you do not want to extend the default base which already includes some styling, navbar
+    etc., remove the first line (extends "base.html") -->
+    <div class="jumbotron">
+        <h1 class="display-4">Dashboard</h1>
+        <hr class="my-4">
+
+        <div class="col-md-4">
+               <p>Start scripting now!</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block page_scripts %}
+    <!-- Add your javascript here -->
+    <!-- Bootstrap and Jquery are already included in the base.html which is extended above -->
+{% endblock %}
