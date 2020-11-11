@@ -24,4 +24,4 @@ def set_blueprint(blueprint: Blueprint):
 
 
 def post_loading_actions():
-    print("Nothing to do here")
+    logger.debug("No post loading action defined in plugintemplate.")
