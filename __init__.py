@@ -17,6 +17,11 @@ request_macros = ['config', 'logger']
 
 
 def set_blueprint(blueprint: Blueprint):
+    """
+    Plugins factory method to set a blueprint.
+
+    :param blueprint:
+    """
     global bp
     bp = blueprint
 
@@ -24,4 +29,7 @@ def set_blueprint(blueprint: Blueprint):
 
 
 def post_loading_actions():
-    logger.debug("No post loading action defined in plugintemplate.")
+    """
+    Called by plugin after all plugins are loaded. No order implied.
+    """
+    logger.debug(f"No post loading action defined in plugin {name}.")
